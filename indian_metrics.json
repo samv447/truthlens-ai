@@ -1,0 +1,168 @@
+{
+  "created_utc": "2026-11-22T10:47:48.123306+00:00",
+  "dataset": "IFND (Indian Fake News Dataset)",
+  "dataset_source": "https://github.com/sonalgarg174/Dataset",
+  "source_csv": "C:\\Users\\Sammarth Verma\\Desktop\\TruthLens-Indian-English\\data\\IFND_clean.csv",
+  "total_rows_after_cleaning": 46710,
+  "class_counts": {
+    "REAL": 31129,
+    "FAKE": 15581
+  },
+  "split": {
+    "train": 28026,
+    "validation": 9342,
+    "test": 9342,
+    "random_state": [
+      42,
+      43
+    ],
+    "stratified": true
+  },
+  "validation_models": {
+    "Logistic Regression": {
+      "rows": 9342,
+      "accuracy": 0.9552558338685506,
+      "macro_f1": 0.9485072335954461,
+      "confusion_matrix_labels": [
+        "FAKE",
+        "REAL"
+      ],
+      "confusion_matrix": [
+        [
+          2771,
+          345
+        ],
+        [
+          73,
+          6153
+        ]
+      ],
+      "classification_report": {
+        "FAKE": {
+          "precision": 0.9743319268635724,
+          "recall": 0.8892811296534018,
+          "f1-score": 0.9298657718120805,
+          "support": 3116.0
+        },
+        "REAL": {
+          "precision": 0.9469067405355494,
+          "recall": 0.9882749759074847,
+          "f1-score": 0.9671486953788117,
+          "support": 6226.0
+        },
+        "accuracy": 0.9552558338685506,
+        "macro avg": {
+          "precision": 0.9606193336995609,
+          "recall": 0.9387780527804432,
+          "f1-score": 0.9485072335954461,
+          "support": 9342.0
+        },
+        "weighted avg": {
+          "precision": 0.9560543406852091,
+          "recall": 0.9552558338685506,
+          "f1-score": 0.9547130724036527,
+          "support": 9342.0
+        }
+      }
+    },
+    "Multinomial Naive Bayes": {
+      "rows": 9342,
+      "accuracy": 0.9472275743952044,
+      "macro_f1": 0.9385360246608265,
+      "confusion_matrix_labels": [
+        "FAKE",
+        "REAL"
+      ],
+      "confusion_matrix": [
+        [
+          2668,
+          448
+        ],
+        [
+          45,
+          6181
+        ]
+      ],
+      "classification_report": {
+        "FAKE": {
+          "precision": 0.9834131957242904,
+          "recall": 0.8562259306803595,
+          "f1-score": 0.9154228855721394,
+          "support": 3116.0
+        },
+        "REAL": {
+          "precision": 0.9324181626187962,
+          "recall": 0.9927722454224222,
+          "f1-score": 0.9616491637495138,
+          "support": 6226.0
+        },
+        "accuracy": 0.9472275743952044,
+        "macro avg": {
+          "precision": 0.9579156791715433,
+          "recall": 0.9244990880513908,
+          "f1-score": 0.9385360246608265,
+          "support": 9342.0
+        },
+        "weighted avg": {
+          "precision": 0.9494274243568309,
+          "recall": 0.9472275743952044,
+          "f1-score": 0.9462305079155704,
+          "support": 9342.0
+        }
+      }
+    }
+  },
+  "selected_model": "Logistic Regression",
+  "held_out_indian_test": {
+    "rows": 9342,
+    "accuracy": 0.9543994861913937,
+    "macro_f1": 0.9477255436438798,
+    "confusion_matrix_labels": [
+      "FAKE",
+      "REAL"
+    ],
+    "confusion_matrix": [
+      [
+        2789,
+        327
+      ],
+      [
+        99,
+        6127
+      ]
+    ],
+    "classification_report": {
+      "FAKE": {
+        "precision": 0.9657202216066482,
+        "recall": 0.8950577663671374,
+        "f1-score": 0.9290473017988008,
+        "support": 3116.0
+      },
+      "REAL": {
+        "precision": 0.9493337465137899,
+        "recall": 0.9840989399293286,
+        "f1-score": 0.966403785488959,
+        "support": 6226.0
+      },
+      "accuracy": 0.9543994861913937,
+      "macro avg": {
+        "precision": 0.957526984060219,
+        "recall": 0.939578353148233,
+        "f1-score": 0.9477255436438798,
+        "support": 9342.0
+      },
+      "weighted avg": {
+        "precision": 0.9547994130080466,
+        "recall": 0.9543994861913937,
+        "f1-score": 0.9539436267243977,
+        "support": 9342.0
+      }
+    }
+  },
+  "limitations": [
+    "IFND source-derived labels can contain errors and source-style shortcuts.",
+    "Near-duplicate paraphrases may remain; source-level holdout not possible without reliable source IDs.",
+    "IFND contains claims/statements; performance on full news articles may differ.",
+    "A text classifier is not independent factual verification."
+  ]
+}
